@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercícios Python</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>💻 Pratique Python!</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+        <li><a href="exercicios.html" class="ativo"><i class="fas fa-terminal"></i> Exercícios</a></li>
+        <li><a href="index.html#videos"><i class="fab fa-youtube"></i> Vídeos</a></li>
+        <li><a href="index.html#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="exercicios-basicos">
+      <h2><i class="fas fa-play-circle"></i> Exercícios Básicos com Explicações</h2>
+
+      <article class="exercicio">
+        <h3>🔸 Exercício 1: Olá, Mundo!</h3>
+        <p><strong>Enunciado:</strong> Escreva um programa que mostre na tela a mensagem “Olá, mundo!”</p>
+        <details>
+          <summary>Ver Solução</summary>
+          <pre><code>print("Olá, mundo!")</code></pre>
+          <p><strong>Explicação:</strong> A função <code>print()</code> exibe o texto entre aspas na tela.</p>
+        </details>
+      </article>
+
+      <article class="exercicio">
+        <h3>🔸 Exercício 2: Soma de Números</h3>
+        <p><strong>Enunciado:</strong> Peça dois números ao usuário e mostre a soma.</p>
+        <details>
+          <summary>Ver Solução</summary>
+          <pre><code>
+n1 = int(input("Digite um número: "))
+n2 = int(input("Digite outro número: "))
+soma = n1 + n2
+print("A soma é", soma)
+          </code></pre>
+          <p><strong>Explicação:</strong> A função <code>input()</code> recebe valores e <code>int()</code> converte para número.</p>
+        </details>
+      </article>
+    </section>
+
+    <section id="exemplos">
+      <h2><i class="fas fa-lightbulb"></i> Exemplos Explicados</h2>
+
+      <article>
+        <h3>🔹 Exemplo: Calculadora de IMC</h3>
+        <pre><code>
+peso = float(input("Peso (kg): "))
+altura = float(input("Altura (m): "))
+imc = peso / (altura ** 2)
+print("IMC:", round(imc, 2))
+        </code></pre>
+        <p><strong>Explicação:</strong> O IMC é o peso dividido pela altura ao quadrado. Usamos <code>round()</code> para arredondar.</p>
+      </article>
+    </section>
+
+    <section id="desafios">
+      <h2><i class="fas fa-puzzle-piece"></i> Desafios com Explicações</h2>
+
+      <article>
+        <h3>🟣 Desafio: Número Primo</h3>
+        <p>Peça ao usuário um número e diga se ele é primo.</p>
+        <details>
+          <summary>Ver Solução</summary>
+          <pre><code>
+num = int(input("Digite um número: "))
+divisores = 0
+for i in range(1, num+1):
+    if num % i == 0:
+        divisores += 1
+if divisores == 2:
+    print("É primo")
+else:
+    print("Não é primo")
+          </code></pre>
+          <p><strong>Explicação:</strong> Um número primo possui apenas dois divisores: 1 e ele mesmo.</p>
+        </details>
+      </article>
+
+      <article>
+        <h3>🟣 Desafio: Jogo de Adivinhação</h3>
+        <p>O computador escolhe um número aleatório entre 1 e 10. O usuário tenta adivinhar.</p>
+        <details>
+          <summary>Ver Solução</summary>
+          <pre><code>
+import random
+numero = random.randint(1, 10)
+palpite = int(input("Adivinhe o número (1 a 10): "))
+if palpite == numero:
+    print("Acertou!")
+else:
+    print("Errou! O número era", numero)
+          </code></pre>
+          <p><strong>Explicação:</strong> A função <code>randint()</code> sorteia um número inteiro.</p>
+        </details>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Annezinha 💜</p>
+  </footer>
+</body>
+</html>
